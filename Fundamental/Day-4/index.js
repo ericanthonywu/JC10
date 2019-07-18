@@ -83,10 +83,14 @@ var newArr = [1,2,3,4,5,6,7,8]
 
 
 
-var d = new Date()
 
-var arrDays = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]
-var arrMonths = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober",
-"November", "Desember"]
 
-console.log('Hari ini adalah hari ' + arrDays[d.getDay()] + ' bulan ' + arrMonths[d.getMonth()] + ' tahun ' + d.getFullYear())
+
+
+
+
+
+
+
+
+
