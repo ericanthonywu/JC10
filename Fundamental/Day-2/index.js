@@ -26,4 +26,3 @@ var angka = 7
 
 // console.log(Math.pow(3+2, 1+1))
 
-console.log(55 / Math.pow(1.72, 2))
