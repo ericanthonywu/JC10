@@ -1,0 +1,93 @@
+<script>
+
+// do{
+
+//     var arrival = parseInt(prompt('Insert arrival time'))
+//     var amPMarr = prompt('1.AM \nor \n2.PM')
+//     var departure = parseInt(prompt('Insert departure time'))
+//     var amPMdep = prompt('1.AM \nor \n2.PM')
+
+//     var totalHrs
+
+//     if ((amPMarr == amPMdep) && (departure == arrival)){
+//         totalHrs = 24
+//     }else if(amPMarr == amPMdep){
+//         totalHrs = departure - arrival
+//     }else if (amPMdep != amPMarr){
+//         totalHrs = (departure + 12) - arrival
+//     }
+
+//     var totalPrice
+
+//     if (totalHrs <= 2){
+//         totalPrice = totalHrs * 2000
+//     }
+//     else if (totalHrs > 2){
+//         totalPrice = (2 * 2000) + ((totalHrs - 2) * 500)
+//     }
+
+//     alert('Your total parking fee is: Rp.' + totalPrice )
+
+
+//     var repeat = confirm('Would you like to repeat?')
+
+//     if(!repeat){
+//         alert('Thank you!')
+//     }
+// }while(repeat)
+
+
+
+
+
+
+
+
+/**
+ * 1. Input jam tiba
+ * 2. Input apakah jam tiba AM atau PM
+ * 3. Input jam berangkat
+ * 4. Input apakah jam berangkat Am atau PM
+ * 5. Tarif parkir = 2000/jam utk 2 jam pertama dan 500 utk tiap jam berikutnya
+ * 6. Display total harga parkir
+ * 7. Konfirmasi jika ingin ulang
+ * 8. Display message jika tidak ulang
+ * 
+ * notes : Anggap semua waktu tidak ada yg melebihi 24 jam
+ * 
+*/
+
+do{
+    var datang = parseInt(prompt('Input jam datang (1-12)'))
+    var amPMDatang = prompt('1.AM \natau \n2.PM?')
+    var pulang = parseInt(prompt('Input jam pulang (1-12)'))
+    var amPMPulang = prompt('1.AM \natau \n2.PM?')
+
+    var totalHrs
+    var totalPrice
+
+    if(amPMDatang == amPMPulang && datang == pulang){
+        totalHrs = 24
+    }else if(amPMDatang == amPMPulang){
+        totalHrs = pulang - datang
+    }else if(amPMDatang != amPMPulang){
+        totalHrs = (pulang + 12) - datang
+    }
+
+    if(totalHrs <=2){
+        totalPrice = totalHrs * 2000
+    }else if(totalHrs > 2){
+        totalPrice = (totalHrs - 2) * 500 + 4000
+    }
+
+    alert('Total tarif parkir anda: ' + totalPrice)
+
+    repeat = confirm('Ulang tidak?')
+
+    if(!repeat){
+        alert('Terima kasih')
+    }
+    
+}while(repeat)
+
+</script>
