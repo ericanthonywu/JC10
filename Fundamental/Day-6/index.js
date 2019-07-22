@@ -33,13 +33,34 @@ function hapusItem(item){
     console.log(arrBaru)
     console.log(arrKodePos)
 }
+        // tampilItem('Jakarta')
+        // output -> Jakarta dan kodeposnya
+
+function tampilItem(item){
+    var x;
+
+    if(arrBaru.includes(item)){
+        x = arrBaru.indexOf(item)
+        console.log('Kota anda : ' + arrBaru[x] + ' kode pos : ' + arrKodePos[x])
+    }else{
+        console.log('Kota anda tidak ada')
+    }
+
+}
 
 var arrBaru = ['Medan', 'Bandung', 'Jakarta', 'Palembang', 'Manado', 'Tangerang']
 var arrKodePos = [11,12,13,14,15,16]
+
+tampilItem('Jakarta')
+
+
+
+
+
 
 // arrBaru.splice(arrBaru.indexOf('Jakarta'), 1)
 // console.log(arrBaru.indexOf('Bandung'))
 // console.log(arrKodePos[arrBaru.indexOf('Jakarta')])
 
 
-hapusItem('bandung')
+// hapusItem('bandung')
