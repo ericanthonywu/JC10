@@ -1,10 +1,5 @@
 
 
-
-
-
-
-
 var arrItem = ['Jeruk', 'Apel', 'Leci']
 var arrPrice = [3000, 7000, 10000]
 
