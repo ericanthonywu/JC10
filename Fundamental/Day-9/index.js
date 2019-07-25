@@ -74,6 +74,39 @@ function cetakanMusisi(nama, laguHits, genre){
 // var musikKu = new Musisi('Via Vallen', 'Sayang', 'Dubstep')
 // console.log(musikKu)
 
+
+
+
+var baju = {
+    warna : 'Hitam',
+    size : 'L',
+    harga : 12000,
+    ongkir : 20000,
+    pemilik : {
+        nama : 'Seto',
+        toko : {
+            namaToko : 'Kaos Ntab',
+            status : 'Premium'
+        }
+    }
+}
+
+var {warna, size, harga, ongkir, pemilik} = baju
+var {nama, toko} = pemilik
+var {namaToko, status} = toko
+
+console.log(status)
+// console.log(`Warna : ${baju.warna}, Size : ${baju.size}, Harga : ${baju.harga}`)
+// console.log(`Pemilik : ${nama}, Toko : ${namaToko}, Status : ${status}`)
+// console.log(`Warna : ${warna}, Size : ${size}, Harga : ${harga}`)
+
+// console.log(displayData(data))
+
+// var x = 39837528
+// var y = 5
+
+// console.log(`Bro ini angka ${x} ini angka ${y}`)
+
 class Mobil{
     constructor(warna, tipe, merek, tahun){
         this.colour = warna,
@@ -101,31 +134,16 @@ function displayData(dataKu){
     return hasil
 }
 
-var baju = {
-    warna : 'Hitam',
-    size : 'L',
-    harga : 12000,
-    ongkir : 20000,
-    pemilik : {
-        nama : 'Seto',
-        toko : {
-            namaToko : 'Kaos Ntab',
-            status : 'Premium'
+function filtering(arr, filterWarna='', filterTipe='', filterMerek='', filterTahun=''){
+    var newArr = []
+
+    for(var i = 0; i < arr.length; i++){
+        if(arr[i].colour.includes(filterWarna) && arr[i].type.includes(filterTipe) && arr[i].brand.includes(filterMerek) && arr[i].year.includes(filterTahun)){
+            newArr.push(arr[i])
         }
     }
+
+    return displayData(newArr)
 }
 
-var {warna, size, harga, ongkir} = baju
-var {nama} = baju.pemilik
-var {namaToko, status} = baju.pemilik.toko
-
-console.log(`Warna : ${baju.warna}, Size : ${baju.size}, Harga : ${baju.harga}`)
-console.log(`Pemilik : ${nama}, Toko : ${namaToko}, Status : ${status}`)
-// console.log(`Warna : ${warna}, Size : ${size}, Harga : ${harga}`)
-
-// console.log(displayData(data))
-
-// var x = 39837528
-// var y = 5
-
-// console.log(`Bro ini angka ${x} ini angka ${y}`)
+console.log(filtering(data))
