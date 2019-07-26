@@ -142,7 +142,7 @@ function filtering(arr, filterWarna='', filterTipe='', filterMerek='', filterTah
             newArr.push(arr[i])
         }
     }
-
+            // hasil
     return displayData(newArr)
 }
 
