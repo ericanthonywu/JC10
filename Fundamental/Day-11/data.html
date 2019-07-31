@@ -29,7 +29,7 @@
             </thead>
             <!--  -->
             <tbody>
-                
+                <!-- DITAMBAHKAN DISINI -->
             </tbody>
             <!--  -->
             <tfoot>
@@ -52,7 +52,11 @@
             }
         }
 
-        var data = []
+        var data = [
+            new Orang('Andi', 23, 'Coder'),
+            new Orang('Seto', 43, 'Developer'),
+            new Orang('Budi', 13, 'CEO')
+        ]
 
         tambahData = () => {
             var inputNama = document.getElementById('nama').value
@@ -63,7 +67,6 @@
 
             data.push(newMan)
             tampilData(data)
-            console.log(data)
         }
 
         tampilData = (arrData) => {
@@ -78,6 +81,8 @@
 
             document.getElementsByTagName('tbody')[0].innerHTML = hasil
         }
+
+        tampilData(data)
 
     </script>
 </body>
